@@ -42,8 +42,9 @@
 		var makeLove = $(".makeLove");
 		var svg_wrap = $(".svg_wrap");
 		var sum = 1;
-		var x,y,flag;
+		var x,y,flag,clicked;
 		flag = true;
+		clicked = true;
 
 		function random(Min,Max){
 		      var Range = Max - Min;
@@ -51,9 +52,25 @@
 		      var num = Min + Math.round(Rand * Range);
 		      return num;
 		}
+		
+		if(clicked){
+			for(var i = 0; i <= 28 ; i++){
+				(function(i){
+					setTimeout(function(i){
+						makeLove.trigger('click');
+					}, i * 100);
+
+				})(i);
+
+			}
+			
+		}
 
 
 		makeLove.on('click',function(){
+			
+			clicked = false;
+			
 			if(!flag){
 				return false;
 			}
