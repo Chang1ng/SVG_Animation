@@ -42,7 +42,11 @@
 		var makeLove = $(".makeLove");
 		var svg_wrap = $(".svg_wrap");
 		var sum = 1;
+<<<<<<< Updated upstream
 		var x,y,flag,clicked;
+=======
+		var x,y,num,flag,clicked;
+>>>>>>> Stashed changes
 		flag = true;
 		clicked = true;
 
@@ -66,11 +70,27 @@
 			
 		}
 
+		if(clicked){
+			for(var i = 0; i <= 28 ; i++){
+				(function(i){
+					setTimeout(function(i){
+						makeLove.trigger('click');
+					}, i * 100);
+
+				})(i);
+
+			}
+			
+		}
 
 		makeLove.on('click',function(){
+<<<<<<< Updated upstream
 			
 			clicked = false;
 			
+=======
+			clicked = false;
+>>>>>>> Stashed changes
 			if(!flag){
 				return false;
 			}
